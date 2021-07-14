@@ -43,13 +43,13 @@ public class BaseClass {
 		}
 		else if(br.equals("firefox"))
 		{
-			System.setProperty("webdriver.chrome.driver", readconfig.getFireFoxPath());
+			System.setProperty("webdriver.gecko.driver", readconfig.getFireFoxPath());
 			driver = new FirefoxDriver(); 
 		}
 		
 		else if(br.equals("ie"))
 		{
-			System.setProperty("webdriver.chrome.driver", readconfig.getIEPath());
+			System.setProperty("webdriver.ie.driver", readconfig.getIEPath());
 			driver = new InternetExplorerDriver(); 
 		}
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
